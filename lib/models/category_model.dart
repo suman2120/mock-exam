@@ -14,7 +14,7 @@ class Category {
     name = json['name'];
     createdAt = DateTime.parse(json['createdAt']);
     updatedAt = DateTime.parse(json['updatedAt']);
-    count = CategoryCount.fromJson(json['count']);
+    count = CategoryCount.fromJson(json['_count']);
   }
   
   Map<String, dynamic> toJson() {
@@ -23,6 +23,9 @@ class Category {
     data['name'] = this.name;
     data['createdAt'] = this.createdAt;
     data['updatedAt'] = this.updatedAt;
+
+    
+
     return data;
   }
 }
